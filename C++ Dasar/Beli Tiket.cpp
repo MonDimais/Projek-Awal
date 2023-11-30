@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int main(){
@@ -12,7 +11,7 @@ int main(){
 	int harga;
 	char pilih;
 	string judul;
-	
+
 	while(true){
 		cout << "Selamat Datang!! Mau nonton apa?\n";
 		cout << "  Kode Film\tNama Film\tHarga Tiket\n";
@@ -35,7 +34,7 @@ int main(){
 		for(int i = 1; i < 55; i++){
 			cout << "=";
 		}
-		
+
 		switch(codefilm){
 			case 1 :
 			total = arm * tiket;
@@ -53,15 +52,22 @@ int main(){
 			judul = "Toy Story";
 			break;
 		}
-		
-		if(tiket > 5){
-			total *= 0.4;
-		}
+
 		cout << endl;
 		cout << judul << endl;
 		cout << "Harga Tiket : Rp. " << harga << endl;
 		cout << "Jumlah Pembelian : " << tiket << endl;
-		cout << "Harga total : Rp. " << total << "\n(Diskon berlaku dalam pembelian lebih dari 5)" << endl;
+		if(tiket > 5)
+        {
+            cout << "Harga sebelum diskon : Rp. " << total;
+            total *= 0.4;
+            cout << "\nHarga setelah diskon : Rp. " << total << "\n(Diskon berlaku dalam pembelian lebih dari 5)" << endl;
+        }
+        else
+        {
+            cout << "Harga total : Rp. " << total << "\n(Diskon berlaku dalam pembelian lebih dari 5)" << endl;
+        }
+
 		cout << "Apakah anda mau memesan tiket lagi? (Y/N) ";
 		cin >> pilih;
 		if(pilih == 'Y' or pilih == 'y'){
@@ -74,5 +80,5 @@ int main(){
 			break;
 		}
 	}
-	
+
 }
