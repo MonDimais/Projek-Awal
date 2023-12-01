@@ -4,6 +4,7 @@ using namespace std;
 string room[5][3] = {{"k", "k", "k"}, {"k", "k", "k"}, {"k", "k", "k"}, {"k", "k", "k"}, {"k", "k", "k"}};
 char pilihan;
 
+
 void opening()
 {
     cout << "Selamat datang\n";
